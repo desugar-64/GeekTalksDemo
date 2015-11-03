@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.sergeyfitis.geektalksdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".screens.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".screens.activities.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".screens.activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.Main" />
+        <activity
+            android:name=".screens.activities.GroupDetailsActivity"
+            android:parentActivityName=".screens.activities.MainActivity"
+            android:theme="@style/AppTheme.GroupDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.sergeyfitis.geektalksdemo.screens.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".screens.activities.PostDetailsActivity"
+            android:label="@string/title_activity_post_details"
+            android:parentActivityName=".screens.activities.GroupDetailsActivity"
+            android:theme="@style/AppTheme.PostDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.sergeyfitis.geektalksdemo.screens.activities.GroupDetailsActivity" />
+        </activity>
+    </application>
+
+</manifest>

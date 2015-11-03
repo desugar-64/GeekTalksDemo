@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/cerulean</color>
+    <color name="colorPrimaryDark">@color/cerulean</color>
+    <color name="colorAccent">@color/cerulean</color>
+
+    <color name="corn">#FFEE58</color>
+    <color name="gorse">#FDD835</color>
+    <color name="cerulean">#0071a8</color>
+
+    <array name="progress_bar_colors">
+        <item>@color/gorse</item>
+        <item>@color/cerulean</item>
+    </array>
+</resources>

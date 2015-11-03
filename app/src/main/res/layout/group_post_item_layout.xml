@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="@dimen/medium_padding"
+    android:layout_marginRight="@dimen/medium_padding"
+    android:layout_marginTop="4dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding">
+
+            <ImageView
+                android:id="@+id/iv_post_creator"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="4dp"
+                android:src="@drawable/image_place_holder" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_post_creator"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_post_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+
+                    android:paddingLeft="@dimen/small_padding"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    tools:text="Post title" />
+
+                <TextView
+                    android:id="@+id/tv_post_date_created"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="@dimen/small_padding"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    tools:text="today" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.android.sergeyfitis.geektalksdemo.ui.AspectRationImageView
+            android:id="@+id/iv_post_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@color/gorse"
+            android:transitionName="@string/transition_group_cover" />
+
+        <TextView
+            android:id="@+id/tv_post_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:padding="@dimen/small_padding"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:transitionName="@string/transition_group_title"
+            tools:text="Post text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

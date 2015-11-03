@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.sergeyfitis.geektalksdemo.screens.activities.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <View
+        android:id="@+id/v_main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:background="?colorAccent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_likes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/group_bottom_margin"
+        android:paddingTop="@dimen/group_top_margin" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_bar_padding"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/sc_pre_lollipop_enabler"
+                android:layout_gravity="end"
+                app:theme="@style/ToolBarSwitch"
+                android:layout_marginRight="@dimen/medium_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

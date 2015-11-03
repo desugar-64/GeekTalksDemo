@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/medium_padding"
+    android:layout_marginRight="@dimen/medium_padding"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:orientation="vertical"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.sergeyfitis.geektalksdemo.ui.AspectRationImageView
+            android:id="@+id/iv_group_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/transition_group_cover"
+            tools:src="@color/gorse" />
+
+        <LinearLayout
+            android:id="@+id/ll_group_item_bg"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_group_item_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:transitionName="@string/transition_group_title"
+                android:padding="@dimen/small_padding"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                tools:text="Item" />
+
+            <TextView
+                android:id="@+id/tv_group_item_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:drawableLeft="@drawable/ic_action_thumb_up"
+                android:gravity="end|center_vertical"
+                android:paddingBottom="@dimen/small_padding"
+                android:paddingRight="@dimen/small_padding"
+                android:paddingTop="@dimen/small_padding"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                tools:text="199" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
